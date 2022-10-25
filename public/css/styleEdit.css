@@ -1,0 +1,188 @@
+/* Formularios */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/fondo_inicio.jpg);
+    background-size: 20% 25%;
+    background-repeat: repeat;
+}
+
+form {
+    height: 500px;
+    width: 500px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 80px;
+    border-radius: 6px;
+    box-shadow: 6px 8px 12px rgba(0, 0, 0, 0.3), -6px 0 12px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    margin-left: 700px;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(223, 3, 3);
+    font-size: 50px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    line-height: 2;
+    grid-gap: 0;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    line-height: 2;
+    grid-gap: 0;
+}
+
+.tmn {
+    width: 50px;
+}
+
+.text-center {
+    margin-top: 5px;
+    font-size: 20px;
+    margin-left: -35px;
+}
+
+input {
+    margin-bottom: 10px;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+select {
+    margin-bottom: 10px;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+input[type='radio'] {
+    width: 30px;
+    height: 30px;
+    align-content: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+input[type='submit'] {
+    height: 46px;
+    background-color: rgb(223, 3, 3);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 0;
+    border-radius: 6px;
+    text-align: center;
+}
+
+input[type='submit']:hover {
+    background-color: rgb(223, 3, 3);
+    transition: 0.5s ease;
+}
+
+.imglogin {
+    width: 100%;
+}
+
+.checkbox-container {
+    margin-bottom: 1rem;
+}
+
+.label {
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    border: 1px solid rgb(223, 3, 3);
+    transition: 0.5s;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    visibility: hidden;
+    display: none;
+}
+
+input[type="radio"]:checked~.label {
+    background: rgb(223, 3, 3);
+    color: #fff;
+}
+
+input[type="number"] {
+    width: 150px;
+    border: 1px solid #000;
+}
+
+.grid-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    line-height: 2;
+    grid-gap: 0;
+}
+
+.title {
+    margin-bottom: 5px;
+}
+
+.button-31 {
+    background-color: rgb(248, 248, 248);
+    list-style: none;
+    border-radius: 4px;
+    border-style: none;
+    box-sizing: border-box;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    display: flex;
+    font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    max-width: none;
+    min-height: 44px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px 8px;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: -50vh;
+    margin-left: -110vh;
+}
+
+.button-31:hover,
+.button-31:focus {
+    opacity: .75;
+}
