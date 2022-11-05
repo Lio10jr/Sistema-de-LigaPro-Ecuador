@@ -54,17 +54,17 @@ Recordar si quiere entrar en modo administrador registrar sus credenciales en la
 ## Vistas
 
 Presenta información de la LigaPro de Ecuador y contenido del cual se referencia.
-<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/Home.png" width="100"></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/Home.png" width="700"></p>
 
 Cada serie contiene información como participantes, tabla de posiciones y encuentros de la etapa actual.
-<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/SerieA.png" width="100"></p>
-<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/SerieB.png" width="100"></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/SerieA.png" width="700"></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/SerieB.png" width="700"></p>
 
 **Dentro del panel de administración tenemos**
 Una interfaz muy amigable, donde podemos controlar los datos que presentamos en la página.<br>
 Se puede realizar el crud de  manera muy facil y se puede dar un rol a un usuario normal para que tambien administre.
-<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/Admin.png" width="100"></p>
-<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/Crud.png" width="100"></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/Admin.png" width="700"></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/Crud.png" width="700"></p>
 
 
 ## Construido con 🛠️
