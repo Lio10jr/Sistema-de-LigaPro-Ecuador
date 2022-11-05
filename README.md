@@ -1,6 +1,6 @@
 <h2 align="center">593 TRISCORE</h2>
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/Home.png" width="400"></p>
 
 Es una página web para realizar un control de forma manual sobre los resultados del compeonato Ecuatoriano de Futbol, contiene tabla
 de posiciones y encuentros tanto jugados como próximos. Realizada con [Laravel 9](https://laravel.com).
@@ -54,17 +54,17 @@ Recordar si quiere entrar en modo administrador registrar sus credenciales en la
 ## Vistas
 
 Presenta información de la LigaPro de Ecuador y contenido del cual se referencia.
-<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/img/imgReadme/Home.png" width="100"></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/Home.png" width="100"></p>
 
 Cada serie contiene información como participantes, tabla de posiciones y encuentros de la etapa actual.
-<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/img/imgReadme/SerieA.png" width="100"></p>
-<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/img/imgReadme/SerieB.png" width="100"></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/SerieA.png" width="100"></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/SerieB.png" width="100"></p>
 
 **Dentro del panel de administración tenemos**
 Una interfaz muy amigable, donde podemos controlar los datos que presentamos en la página.<br>
 Se puede realizar el crud de  manera muy facil y se puede dar un rol a un usuario normal para que tambien administre.
-<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/img/imgReadme/Admin.png" width="100"></p>
-<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/img/imgReadme/Crud.png" width="100"></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/Admin.png" width="100"></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/imgReadme/Crud.png" width="100"></p>
 
 
 ## Construido con 🛠️
