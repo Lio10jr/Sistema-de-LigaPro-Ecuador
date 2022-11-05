@@ -9,48 +9,6 @@
 
     class MailSendC extends Controller{
 
-        public function sendmail(){
-            $name = "+593TRI SCORESS";  // Name of your website or yours
-            $to = "kevinzambrano593@gmail.com";  // mail of reciever
-            $subject = "Alerta de Equipo Favorito";
-            $body = "PONTE PILAS ";
-            $from = "kzambrano8@utmachala.edu.ec";  // you mail
-            // $from = "kzambrano8@utmachala.edu.ec";  // you mail
-            $password = "!ZMKev10$";  // your mail password
-    
-            // Ignore from here
-    
-            require_once "../App/Http/PHPMailer/SMTP.php";
-            require_once "../App/Http/PHPMailer/Exception.php";
-            $mail = new PHPMailer();
-    
-            // To Here
-    
-            //SMTP Settings
-            $mail->isSMTP();
-            // $mail->SMTPDebug = 3;  Keep It commented this is used for debugging                          
-            $mail->Host = "smtp.gmail.com"; // smtp address of your email
-            $mail->SMTPAuth = true;
-            $mail->Username = $from;
-            $mail->Password = $password;
-            $mail->Port = 587;  // port
-            $mail->SMTPSecure = "tls";  // tls or ssl
-            $mail->smtpConnect([
-            'ssl' => [
-                'verify_peer' => false,
-                'verify_peer_name' => false,
-                'allow_self_signed' => true
-                ]
-            ]);
-    
-            //Email Settings
-            $mail->isHTML(true);
-            $mail->setFrom($from, $name);
-            $mail->addAddress($to); // enter email address whom you want to send
-            $mail->Subject = ("$subject");
-            $mail->Body = $body;
-        }
-
         public function alerta(){    
             $equipFav = Equipo_Favorito::all();
 
@@ -95,7 +53,7 @@
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "{\"from\":{\"email\":\"kzambrano8@utmachala.edu.ec\",\"name\":\"593 TRISCORES\"},\"to\":[{\"email\":\"$email\",\"name\":\"593 TRISCORES\"}],\"subject\":\"Alerta de Juego\",\"html_part\":\"<html>\\n<head></head>\\n<body><p>Hoy es el dia!! Ponte pilas que hoy juega tu equipo favorito!!.</p></body>\\n</html>\\n\",\"text_part\":\"\",\"text_part_auto\":true,\"headers\":{\"X-CustomHeader\":\"Header value\"},\"smtp_tags\":[\"593\"],\"attachments\":[{\"content\":\"593 TRISCORES\",\"file_name\":\"TRI.jpg\",\"content_type\":\"image/jpg\",\"content_id\":\"\"}]}",
+            CURLOPT_POSTFIELDS => "{\"from\":{\"email\":\"email_registrado\",\"name\":\"593 TRISCORES\"},\"to\":[{\"email\":\"$email\",\"name\":\"593 TRISCORES\"}],\"subject\":\"Alerta de Juego\",\"html_part\":\"<html>\\n<head></head>\\n<body><p>Hoy es el dia!! Ponte pilas que hoy juega tu equipo favorito!!.</p></body>\\n</html>\\n\",\"text_part\":\"\",\"text_part_auto\":true,\"headers\":{\"X-CustomHeader\":\"Header value\"},\"smtp_tags\":[\"593\"],\"attachments\":[{\"content\":\"593 TRISCORES\",\"file_name\":\"TRI.jpg\",\"content_type\":\"image/jpg\",\"content_id\":\"\"}]}",
             CURLOPT_HTTPHEADER => array(
                 "content-type: application/json",
                 "x-auth-token: waQNhPx7h9AENvehyFSz37mQTzT6zimVyhtA4yCx"
@@ -106,12 +64,6 @@
             $err = curl_error($curl);
 
             curl_close($curl);
-
-            // if ($err) {
-            // echo "cURL Error #:" . $err;
-            // } else {
-            // echo $response;
-            // }
         }
         
         public function UpdateNotification(Equipo_Favorito $user)

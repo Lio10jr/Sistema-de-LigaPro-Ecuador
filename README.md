@@ -1,64 +1,84 @@
+<h2 align="center">593 TRISCORE</h2>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Es una página web para realizar un control de forma manual sobre los resultados del compeonato Ecuatoriano de Futbol, contiene tabla
+de posiciones y encuentros tanto jugados como próximos. Realizada con [Laravel 9](https://laravel.com).
 
-## About Laravel
+### Pre-requisitos 📋
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* Visual Code - Editor de codigo recomendable
+* Xampp - Interprete de php (opcional)
+* Postgres - Base de datos
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Instalación
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Como base de datos se utilizo PostgresSQL version 15
+<p align="center"><a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target="_blank"><img src="https://www.postgresql.org/media/img/about/press/elephant.png" width="100"></a></p>
 
-## Learning Laravel
+Crear una base de datos con nombre _tri593_ y verificar el puerto con el que trabará _PostgreSql_.<br>
+Archivo a editar **.env**. Como se muestra a continuación:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=tri593
+DB_USERNAME=postgres
+DB_PASSWORD=567
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Coloca los datos cambiando el **puerto**, el **username** y **password**, si es necesario. _Nota:_ La contraseña o password debe ser con el que inicia sesion en su postgres, en caso de estar vacia dejarla sin llenar.
 
-## Laravel Sponsors
+Luego Editar el siguiente archivo: _MailSendC.php_ en el metodo alertEmail, donde tendra que colocar los datos de su cuenta configurada con sus datos en [Mailrelay](https://mailrelay.com/es/).<br>
+Colocar el url que encuentra en su dashboard.<br>
+Como se ve acontinuación:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```
+https://tunombre_asignado.ipzmarketing.com/
+```
+Esa url se debe colocar dentro del metodo ya mencionado. Remplazado asi:
 
-### Premium Partners
+```
+CURLOPT_URL => "https://tunombre_asignado.ipzmarketing.com/api/v1/send_emails",
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Y deberas colocar el email que se registro para el envio en el campo nombrado como _email_registrado_.
 
-## Contributing
+```
+CURLOPT_POSTFIELDS => "{\"from\":{\"email\":\"email_registrado\",\"name\":\"593 TRISCORES\"},...
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Recordar si quiere entrar en modo administrador registrar sus credenciales en la base de datos directamente colocando el tipo de usuario como admin.
 
-## Code of Conduct
+## Vistas
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Presenta información de la LigaPro de Ecuador y contenido del cual se referencia.
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/img/imgReadme/Home.png" width="100"></p>
 
-## Security Vulnerabilities
+Cada serie contiene información como participantes, tabla de posiciones y encuentros de la etapa actual.
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/img/imgReadme/SerieA.png" width="100"></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/img/imgReadme/SerieB.png" width="100"></p>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+**Dentro del panel de administración tenemos**
+Una interfaz muy amigable, donde podemos controlar los datos que presentamos en la página.<br>
+Se puede realizar el crud de  manera muy facil y se puede dar un rol a un usuario normal para que tambien administre.
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/img/imgReadme/Admin.png" width="100"></p>
+<p align="center"><img src="https://github.com/KevinZambran/LigaPro-Ec-administrator-table-and-meetings/blob/main/public/img/imgReadme/Crud.png" width="100"></p>
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Construido con 🛠️
+
+_Proyecto realizado con Laravel 9_
+
+* [Laravel 9](https://laravel.com) - El framework web usado
+* [Mailrelay](https://mailrelay.com/es/) - Controlador de envio de mensajes email
+
+## Autores ✒️
+
+_Proyecto Final Universitario_
+
+* **Oscar Nieves** - *Base de Datos*
+* **Mayker Cabrera** - *Documentación**
+* **Sanchez Leonardo** - *Front-end*
+* **Kevin Zambrano** - *Back-end*

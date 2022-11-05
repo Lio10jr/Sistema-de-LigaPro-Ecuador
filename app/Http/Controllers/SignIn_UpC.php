@@ -22,38 +22,11 @@ class SignIn_UpC extends Controller
                 return redirect()->route('home');
             }
         }
-        //$user = Login::all(); //recupera todos los user
-        // $user = Login::where('nom:user', $nom_user)->orderby('edad', 'desc')->get();
-         //$user = Login::select('nom_user', 'email')->get();
         return view('SignIn-Up');
         // return $user;
     }
 
     public function In(){
-        // $user = new Login;
-
-        // try{
-        //     $user->nom_user = $request->username1;
-        //     $user->clave = $request->password1;
-
-        //     if(Login::where('nom_user', $user->nom_user)->count() > 0){
-        //         $data = Login::where('nom_user', $user->nom_user)->first();
-        //         if ( $data->nom_user == $user->nom_user && $data->clave == $user->clave){
-        //             return view('Home');
-        //         }else{
-        //             $nota = "No coinciden los datos";
-        //             return redirect()->route('sign.error', compact('nota'));
-        //         }
-        //     }else{
-        //         $nota = "Credenciales son incorrectas";
-        //         return redirect()->route('sign.error', compact('nota'));
-        //     }
-    
-        // }catch(Exception $e){
-        //     // $nota = "Ocurrio un error al enviar los datos " .$e;
-        //     // return redirect()->route('sign', $nota); 
-        // }   
-           
         if(auth()->attempt(request(['email', 'password'])) == false)
         {
             return back()->withErrors([
