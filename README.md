@@ -23,9 +23,9 @@ Archivo a editar **.env**. Como se muestra a continuación:
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
 DB_PORT=5432
-DB_DATABASE=tri593
+DB_DATABASE=
 DB_USERNAME=postgres
-DB_PASSWORD=567
+DB_PASSWORD=
 ```
 
 Coloca los datos cambiando el **puerto**, el **username** y **password**, si es necesario. _Nota:_ La contraseña o password debe ser con el que inicia sesion en su postgres, en caso de estar vacia dejarla sin llenar.
